@@ -7,14 +7,12 @@ spec:
   issuerRef: 
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: agileng.io
+  commonName: k8s.agileng.io
   dnsNames:
-    - agileng.io
     - k8s.agileng.io
   acme:
     config:
       - http01:
           ingressClass: nginx
         domains:
-          - agileng.io
           - k8s.agileng.io
